@@ -6,13 +6,6 @@ FEM challenge from Jeremy Theler @ [Linkedin](https://www.linkedin.com/feed/upda
 ### Problem Statement
 
 First we consider the curved second-order `line3` element lying on the x-y plane defined by the corner nodes:
-Sure! Here is the updated markdown with LaTeX math blocks using `$$` for block equations and `$` for inline equations:
-
-# FEM Challenge: Curved Second-Order Line Element
-
-## Problem Statement
-
-Consider a curved second-order line element lying on the x-y plane defined by the corner nodes:
 
 $$
 \mathbf{x}_1 = [0, 1]
@@ -44,7 +37,7 @@ $$
 
 compute the Lebesgue measure (i.e., length) of the element. The real length of the curve is $\pi/2 \approx 1.5708$.
 
-## Mathematical Solution
+## Mathematical Description
 
 The position $\mathbf{x}(\xi)$ on the element can be described as:
 
@@ -78,7 +71,7 @@ $$
 \frac{dh_3(\xi)}{d\xi} = -2\xi
 $$
 
-Thus:
+Therefore:
 
 $$
 \frac{d\mathbf{x}(\xi)}{d\xi} = \left( \xi - \frac{1}{2} \right) \cdot \mathbf{x}_1 + \left( \xi + \frac{1}{2} \right) \cdot \mathbf{x}_2 - 2\xi \cdot \mathbf{x}_3
@@ -151,7 +144,7 @@ length, error = quad(integrand, -1, 1)
 print(f"Computed length of the element: {length:.4f}")
 ```
 
-But this would be too costly, so we can use just numpy and define the quadratuve ourselves
+But this would be too costly, so we can use just use `numpy` and define the quadrature ourselves
 
 ```python
 # Gaussian quadrature points and weights for three-point rule
@@ -166,7 +159,7 @@ for xi, w in zip(gauss_points, gauss_weights):
 print(f"Computed length of the element using Gaussian quadrature: {length:.4f}")
 ```
 
-If we want to visually what we are integrating and the actual quarter circle
+If we want to visualize what we are integrating (i.e., shape function) and the actual quarter circle
 
 ```python
 import matplotlib.pyplot as plt
@@ -199,3 +192,5 @@ plt.grid(True)
 plt.axis('equal')
 plt.show()
 ```
+
+![Image](/plot.png)
