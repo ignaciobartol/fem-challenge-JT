@@ -194,3 +194,5 @@ plt.show()
 ```
 
 ![Image](/plot.png)
+
+Execute the code from the following [Collab Notebook](https://colab.research.google.com/drive/1U45BsnFcxJRixanDuIBiQWVkE0JAgGFh?usp=sharing)
