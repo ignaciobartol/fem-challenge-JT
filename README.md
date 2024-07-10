@@ -102,7 +102,7 @@ $$
 Finally, integrate this magnitude over $[-1, 1]$ to find the length $L$:
 
 $$
-L = \int_{-1}^{1} \sqrt{ \left( \xi + \frac{1}{2} - \frac{2\xi}{\sqrt{2}} \right)^2 + \left( \xi - \frac{1}{\sqrt{2}} - \frac{2\xi}{\sqrt{2}} \right)^2 } \, d\xi
+L = \int_{-1}^{1} \sqrt{ \left( \xi + \frac{1}{2} - \frac{2\xi}{\sqrt{2}} \right)^2 + \left( \xi - \frac{1}{\sqrt{2}} - \frac{2\xi}{\sqrt{2}} \right)^2 } d\xi
 $$
 
 ## Python Solution
